@@ -112,6 +112,7 @@ input {
   text-align: center;
 }
 
+/* Show Scroll Up*/
 .scrollup {
   position: fixed;
   background: var(--card-color);
@@ -138,9 +139,71 @@ input {
   color: var(--white-color);
 }
 
-/* Show Scroll Up*/
 .show-scroll {
   bottom: 3rem;
+}
+
+/* BUTTON */
+.button {
+  position: relative;
+  padding: 0.4em 1.75em;
+  background-color: transparent !important;
+  border-radius: 6px;
+  border: 0.3px solid var(--white-color);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.button::after, .button::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(90deg) translate(-50%, -50%);
+          transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  background-color: var(--orange-color);
+}
+
+.button::before {
+  top: -50%;
+  left: -25%;
+  -webkit-transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+          transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.button:hover::before {
+  -webkit-transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+          transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.button:hover::after {
+  -webkit-transform: skew(45deg) translate(-50%, -50%);
+          transform: skew(45deg) translate(-50%, -50%);
+}
+
+.button:hover {
+  color: var(--white-color);
+  border: 0.3px solid var(--orange-color);
+}
+
+.button:active {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 /* HEADER */
@@ -335,71 +398,6 @@ input {
   letter-spacing: 3px;
 }
 
-.home__button {
-  position: relative;
-  margin-top: 60px;
-  padding: 0.8em 1.75em;
-  background-color: transparent;
-  border-radius: 6px;
-  border: 0.3px solid var(--white-color);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
-  font-weight: 300;
-  font-size: 17px;
-  font-family: "Roboto", "Segoe UI", sans-serif;
-  text-transform: uppercase;
-  color: var(--white-color);
-}
-
-.home__button::after, .home__button::before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  -webkit-transform: skew(90deg) translate(-50%, -50%);
-          transform: skew(90deg) translate(-50%, -50%);
-  position: absolute;
-  inset: 50%;
-  left: 25%;
-  z-index: -1;
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
-  background-color: var(--orange-color);
-}
-
-.home__button::before {
-  top: -50%;
-  left: -25%;
-  -webkit-transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-          transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.home__button:hover::before {
-  -webkit-transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-          transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.home__button:hover::after {
-  -webkit-transform: skew(45deg) translate(-50%, -50%);
-          transform: skew(45deg) translate(-50%, -50%);
-}
-
-.home__button:hover {
-  color: var(--white-color);
-  border: 0.3px solid var(--orange-color);
-}
-
-.home__button:active {
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
-}
-
 /*=============== ABOUT ===============*/
 .about__container {
   position: relative;
@@ -504,6 +502,120 @@ input {
           transform: scale(1);
   -webkit-transition-delay: 0.25s;
           transition-delay: 0.25s;
+}
+
+/*=============== BANNER ===============*/
+.banner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 350px;
+  margin: 100px 0 0;
+  background-image: url(../img/banner.jpeg);
+  background-color: rgba(0, 0, 0, 0.6);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: soft-light;
+}
+
+.banner h3 {
+  font-size: 60px;
+  color: var(--white-color);
+}
+
+.banner p {
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+/*=============== LINKS ===============*/
+.links__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.links__box {
+  width: 320px;
+  margin: 20px;
+  padding: 40px 30px;
+  background: var(--card-color);
+  border-radius: 40px;
+  -webkit-box-shadow: -6px -6px 20px #293449, 6px 6px 20px #293244;
+          box-shadow: -6px -6px 20px #293449, 6px 6px 20px #293244;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+.links__box:hover {
+  -webkit-box-shadow: inset -6px -6px 20px #2e3a52, inset 6px 6px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: inset -6px -6px 20px #2e3a52, inset 6px 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.links__box-icon {
+  text-align: center;
+}
+
+.links__box-icon i {
+  color: var(--white-color);
+  font-size: 50px;
+}
+
+.links__box-content {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.links__box-content h3 {
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 1.4em;
+  letter-spacing: 2px;
+}
+
+.links__box-content p {
+  color: var(--white-color);
+}
+
+.links__box-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 40px;
+  color: var(--white-color);
+  font-size: 16px;
+  text-decoration: none;
+  -webkit-box-shadow: -4px -4px 15px #293449, 4px 4px 15px #293244;
+          box-shadow: -4px -4px 15px #293449, 4px 4px 15px #293244;
+}
+
+.links__box-button:hover {
+  -webkit-box-shadow: -4px -4px 10px #2e3a52, 4px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: -4px -4px 10px #2e3a52, 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /*===============  BREAKPOINTS ===============*/
