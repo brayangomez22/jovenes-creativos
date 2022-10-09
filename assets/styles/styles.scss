@@ -384,7 +384,7 @@ input {
   &__box {
     position: relative;
     width: 400px;
-    height: 470px;
+    height: 530px;
     background: var(--card-color);
     border-radius: 20px;
     overflow: hidden;
@@ -667,9 +667,7 @@ input {
 
   .about {
     &__box {
-      position: relative;
-      width: 400px;
-      height: 470px;
+      height: 420px;
     }
   }
 
