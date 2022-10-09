@@ -105,7 +105,7 @@ input {
 }
 
 .section {
-  padding: 4.5rem 0 2rem;
+  padding: 4.5rem 2rem;
 
   &__title {
     font-size: var(--h1-font-size) !important;
@@ -384,7 +384,7 @@ input {
   &__box {
     position: relative;
     width: 400px;
-    height: 420px;
+    height: 470px;
     background: var(--card-color);
     border-radius: 20px;
     overflow: hidden;
@@ -662,6 +662,14 @@ input {
       & h2 {
         font-size: 3em;
       }
+    }
+  }
+
+  .about {
+    &__box {
+      position: relative;
+      width: 400px;
+      height: 470px;
     }
   }
 

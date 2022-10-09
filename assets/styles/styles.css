@@ -103,7 +103,7 @@ input {
 }
 
 .section {
-  padding: 4.5rem 0 2rem;
+  padding: 4.5rem 2rem;
 }
 
 .section__title {
@@ -418,7 +418,7 @@ input {
 .about__box {
   position: relative;
   width: 400px;
-  height: 420px;
+  height: 470px;
   background: var(--card-color);
   border-radius: 20px;
   overflow: hidden;
@@ -739,6 +739,11 @@ input {
   }
   .home__banner h2 {
     font-size: 3em;
+  }
+  .about__box {
+    position: relative;
+    width: 400px;
+    height: 470px;
   }
   .banner h3 {
     font-size: 60px;
