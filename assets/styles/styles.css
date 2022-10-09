@@ -103,10 +103,11 @@ input {
 }
 
 .section {
-  padding: 4.5rem 2rem;
+  padding: 4.5rem 0 2rem;
 }
 
 .section__title {
+  padding: 0 10px;
   font-size: var(--h1-font-size) !important;
   margin-bottom: var(--mb-2);
   text-align: center;
