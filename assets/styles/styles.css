@@ -684,9 +684,10 @@ input {
 .footer {
   position: relative;
   background-image: url(../img/footer.webp);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.83);
   background-size: cover;
-  background-position: center center;
+  background-attachment: fixed;
+  background-position: top;
   background-blend-mode: soft-light;
   height: 400px;
   margin-top: 100px;
@@ -723,6 +724,73 @@ input {
   text-decoration: none;
   font-size: var(--h2-font-size) !important;
   margin-top: 20px;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.footer__social-bottons {
+  position: relative;
+}
+
+.footer__social-bottons a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+  font-size: var(--h3-font-size);
+  width: 60px;
+  height: 60px;
+  color: var(--white-color);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 0 8px;
+  z-index: 10;
+}
+
+.footer__social-bottons a::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--orange-color);
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.footer__social-bottons a:hover::before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.footer__social-bottons a i {
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.footer__social-bottons a:hover i {
+  background: var(--orange-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 /*===============  BREAKPOINTS ===============*/
