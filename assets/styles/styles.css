@@ -410,16 +410,17 @@ input {
   margin: 0 0 40px 0;
 }
 
-.home__banner h2 {
-  margin: 0;
-  padding: 0;
+.home__banner span {
+  display: block;
+  margin: auto;
+  white-space: nowrap;
+  border-right: 4px solid var(--orange-color);
   color: var(--white-color);
   font-size: 2em;
-  line-height: 0;
-}
-
-.home__banner h2 span {
-  color: var(--orange-color);
+  width: 14ch;
+  -webkit-animation: typing 3s steps(12) infinite, blink 0.5s infinite step-end alternate;
+          animation: typing 3s steps(12) infinite, blink 0.5s infinite step-end alternate;
+  overflow: hidden;
 }
 
 .home__banner a {
@@ -432,6 +433,30 @@ input {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 /*=============== ABOUT ===============*/
